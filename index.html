@@ -297,6 +297,40 @@
             }
         }
 
+        @media (max-width: 700px) {
+        .services {
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+        }
+        .service-card {
+            min-width: 0;
+            width: 95vw;
+            max-width: 370px;
+            font-size: 0.98em;
+            padding: 1em 0.5em;
+        }
+        }
+
+        @media (max-width: 700px) {
+        html { font-size: 15px; }
+        .hero h1 { font-size: 1.4em; }
+        .hero p { font-size: 1em; }
+        .cta { font-size: 0.96em; padding: 0.5em 1em; }
+        .section { padding: 1em 0.4em; }
+        .about img, .service-card img { width: 90px; height: 90px; }
+        h2, .parcours-titre { font-size: 1.15em; }
+        }
+
+        @media (max-width: 700px) {
+        .about, .testimonials {
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+        }
+        .about img { width: 120px; height: 120px; }
+        }
+
 
         .testimonials {
             margin-top: 2.5em;
@@ -340,12 +374,12 @@
         }
 
         .accordion {
-    max-width: 750px;
-    margin: 2.2em auto 0 auto;
-    border-radius: 1.2em;
-    box-shadow: 0 2px 16px #e9d3bb33;
-    background: #fffaf6;
-    padding: 1em 0.6em;
+            max-width: 750px;
+            margin: 2.2em auto 0 auto;
+            border-radius: 1.2em;
+            box-shadow: 0 2px 16px #e9d3bb33;
+            background: #fffaf6;
+            padding: 1em 0.6em;
         }
 
         .accordion-item {
@@ -541,6 +575,109 @@
             border-radius: 14px;
             display: block;
         }
+
+        @media (max-width: 700px) {
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0.6em 3vw;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0.5em 0 0 0;
+            gap: 0;
+        }
+        nav a {
+            margin: 0.15em 0;
+            width: 100%;
+            display: block;
+            padding: 0.6em 1em;
+            font-size: 1em;
+        }
+        .cta {
+            font-size: 1em;
+            margin: 0.7em 0;
+            width: 100%;
+        }
+
+        .hero {
+            min-height: 230px;
+            padding: 1em 0.2em;
+        }
+        .hero-content {
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+        .hero h1 {
+            font-size: 1.23em;
+        }
+        .hero p {
+            font-size: 1em;
+        }
+        .section {
+            padding: 1.2em 0.3em;
+            border-radius: 0.7em;
+        }
+        .services {
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+        }
+        .service-card {
+            min-width: 0;
+            width: 96vw;
+            max-width: 340px;
+            padding: 1em 0.6em;
+            font-size: 0.99em;
+        }
+        .service-card img {
+            width: 90px;
+            height: 90px;
+        }
+        .about {
+            flex-direction: column;
+            align-items: center;
+            gap: 1.1em;
+        }
+        .about img {
+            width: 110px;
+            height: 110px;
+        }
+        .about-text {
+            max-width: 98vw;
+        }
+        .testimonials {
+            flex-direction: column;
+            gap: 1.1em;
+            align-items: center;
+        }
+        .testimonial {
+            max-width: 98vw;
+            min-width: 0;
+            font-size: 1em;
+        }
+        .contact-infos {
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            max-width: 97vw;
+            margin: 1em auto 0 auto;
+        }
+        .contact-item {
+            width: 98vw;
+            max-width: 350px;
+            font-size: 1em;
+            padding: 0.7em 0.6em;
+        }
+        .footer-logo-box img {
+            height: 90px;
+        }
+        }
+
+
     </style>
 </head>
 
