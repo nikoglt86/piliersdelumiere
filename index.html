@@ -677,6 +677,73 @@
         }
         }
 
+        /* BOUTON BURGER */
+        #burger {
+        display: none; /* CACHÉ sur PC */
+        background: none;
+        border: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        width: 48px;
+        cursor: pointer;
+        z-index: 30;
+        margin-left: 5px;
+        }
+
+        #burger .bar {
+        width: 30px;
+        height: 4px;
+        margin: 4px 0;
+        background: #c78e5f;
+        border-radius: 3px;
+        display: block;
+        transition: all 0.3s;
+        }
+
+        @media (max-width: 900px) {
+        #burger { display: flex; }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right:0;
+            background: #fff;
+            box-shadow: 0 2px 16px #e9d3bbcc;
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            padding: 88px 0 2em 0;
+            transition: transform 0.33s;
+            transform: translateY(-100%);
+            z-index: 22;
+        }
+        nav.open {
+            transform: translateY(0);
+        }
+        nav a {
+            display: block;
+            font-size: 1.3em;
+            margin: 1.1em 0;
+            padding: 0.7em 1.2em;
+        }
+        .header-cta {
+            display: none; /* on masque le bouton sur mobile, tu peux le replacer dans le menu si tu veux */
+        }
+        }
+
+        /* Burger animé (croix) */
+        #burger.open .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        }
+        #burger.open .bar:nth-child(2) {
+        opacity: 0;
+        }
+        #burger.open .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        }
+
 
     </style>
 </head>
@@ -687,6 +754,11 @@
         <div class="header-logo-box">
             <img src="Logo-footer.png" alt="Pilier de Lumière">
         </div>
+        <button id="burger" aria-label="Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </button>
         <nav>
             <a href="#">Accueil</a>
             <a href="#" class="menu-link" data-target="soins">Soins</a>
@@ -1200,6 +1272,29 @@
         });
     });
     </script>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.querySelector('header nav');
+
+        burger.addEventListener('click', function() {
+            this.classList.toggle('open');
+            nav.classList.toggle('open');
+            const expanded = this.classList.contains('open');
+            this.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        });
+
+        // Pour fermer le menu quand on clique sur un lien (optionnel mais pratique)
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if(window.innerWidth < 900) {
+                    burger.classList.remove('open');
+                    nav.classList.remove('open');
+                    burger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+        </script>
 
 
 </body>
