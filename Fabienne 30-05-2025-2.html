@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pilier de Lumière – Accueil</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lora:400,700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f6f4ee;
+            color: #322b2b;
+        }
+
+        .header-logo-box {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px #c78e5faa, 0 1.5px 16px #70514633;
+            border: 2px solid #ebc5b9;
+            padding: 8px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1em;
+            transition: box-shadow 0.3s;
+        }
+
+        .header-logo-box img {
+            height: 65px;
+            border-radius: 10px;
+            display: block;
+        }
+
+
+        /* HEADER simple et clair */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 8px #ececec80;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.7em 3vw;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header img {
+            height: 56px;
+            border-radius: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #705146;
+            font-weight: 600;
+            margin: 0 1.3em;
+            font-size: 1.12em;
+            transition: color 0.2s;
+            background: #fff8;
+            border-radius: 8px;
+            padding: 0.4em 0.8em;
+        }
+
+        nav a:hover {
+            color: #c78e5f;
+            background: #ffecd2cc;
+        }
+
+        .cta {
+            background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+            color: #705146;
+            border: none;
+            border-radius: 2em;
+            padding: 0.6em 1.4em;
+            font-size: 1em;
+            font-weight: bold;
+            box-shadow: 0 2px 6px #c7b29833;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+
+        .cta:hover {
+            background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
+            color: #fff;
+        }
+
+        /* HERO avec nouvelle image Egypte puissante et couleurs chaudes */
+        .hero {
+            background: url('pyramides.jpg') center/cover no-repeat;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /* Opaque en haut, transparent en bas */
+            background: linear-gradient(to bottom,
+                    #fcb69fcc 0%,
+                    /* couleur chaude, très opaque en haut */
+                    #fcb69f99 0%,
+                    /* couleur chaude, plus transparente vers le milieu */
+                    #ffffff00 100%
+                    /* totalement transparent en bas */
+                );
+            z-index: 1;
+        }
+
+
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding-top: 3em;
+            padding-bottom: 3em;
+        }
+
+        .hero h1 {
+            font-family: 'Lora', serif;
+            font-size: 2.5em;
+            margin: 0.3em 0 0.4em 0;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            text-shadow: 1px 1px 16px #c7b29877;
+        }
+
+        .hero p {
+            font-size: 1.22em;
+            margin-bottom: 1.4em;
+        }
+
+        .section {
+            max-width: 1040px;
+            margin: 2.8em auto 2.5em auto;
+            background: #fffaf6;
+            border-radius: 1.6em;
+            box-shadow: 0 2px 16px #e9d3bb55;
+            padding: 2em 1.6em;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+            margin-top: 1.7em;
+        }
+
+        .service-card {
+            background: #fff6e9;
+            border-radius: 1.2em;
+            box-shadow: 0 1px 10px #c7b29833;
+            padding: 1.6em 1.2em;
+            flex: 1 1 200px;
+            max-width: 260px;
+            min-width: 200px;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 8px 36px #fcb69faa, 0 2px 20px #70514633;
+            transform: translateY(-3px) scale(1.04);
+            transition: box-shadow 0.22s, transform 0.22s;
+        }
+
+
+        /* Logos agrandis et harmonisés */
+        .service-card img {
+            width: 150px;
+            /* 25% de plus qu'avant */
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fcb69f;
+            background: #fff6e9;
+            margin-bottom: 1em;
+            box-shadow: 0 2px 10px #e9d3bb44;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-card h3 {
+            margin-top: 0.4em;
+            margin-bottom: 0.2em;
+            color: #b07d4e;
+            font-family: 'Lora', serif;
+        }
+
+        .service-card p {
+            font-size: 0.97em;
+            margin-bottom: 1em;
+            color: #54443a;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .about img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fcb69f44;
+            margin-bottom: 1em;
+        }
+
+        .about-text {
+            max-width: 500px;
+        }
+
+        .about-text h2 {
+            margin-top: 0;
+            color: #c78e5f;
+            font-family: 'Lora', serif;
+            font-size: 1.4em;
+        }
+
+        .parcours-details {
+            display: none;
+            background: #f6f4ee;
+            border-radius: 1.3em;
+            box-shadow: 0 2px 18px #c7b29833;
+            padding: 2em 1.5em 1.3em 1.5em;
+            margin-top: 1.1em;
+            margin-bottom: 1.3em;
+            animation: fadein 0.55s;
+            max-width: 700px;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: translateY(-16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .parcours-titre {
+            color: #c78e5f;
+            text-transform: uppercase;
+            font-family: 'Lora', serif;
+            text-align: center;
+            font-size: 1.36em;
+            margin-bottom: 0.2em;
+            margin-top: 0.8em;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
+        .parcours-sep {
+            border: none;
+            border-top: 3px solid #222;
+            width: 44px;
+            margin: 0 auto 1em auto;
+            opacity: 0.6;
+        }
+
+        .parcours-bold {
+            font-weight: bold;
+            color: #3e286e;
+            letter-spacing: 0.01em;
+        }
+
+        @media (max-width: 700px) {
+            .parcours-details {
+                padding: 1.2em 0.6em 1em 0.6em;
+            }
+        }
+
+
+        .testimonials {
+            margin-top: 2.5em;
+            margin-bottom: 1em;
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            background: #fff;
+            border-left: 4px solid #fcb69f;
+            border-radius: 0.8em;
+            padding: 1.3em 1em;
+            font-size: 1.08em;
+            box-shadow: 0 1px 10px #c7b29822;
+            max-width: 300px;
+            min-width: 180px;
+            margin-bottom: 1em;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: "❝";
+            font-size: 2.5em;
+            color: #fcb69f;
+            position: absolute;
+            left: 0.3em;
+            top: -0.9em;
+        }
+
+        .testimonial span {
+            display: block;
+            margin-top: 1em;
+            font-size: 0.98em;
+            color: #705146;
+            font-style: italic;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .accordion {
+    max-width: 750px;
+    margin: 2.2em auto 0 auto;
+    border-radius: 1.2em;
+    box-shadow: 0 2px 16px #e9d3bb33;
+    background: #fffaf6;
+    padding: 1em 0.6em;
+        }
+
+        .accordion-item {
+            margin-bottom: 0.7em;
+            border-radius: 1em;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 1px 6px #e9d3bb22;
+        }
+
+        .accordion-title {
+            width: 100%;
+            background: linear-gradient(90deg,#ffecd2 0%,#fcb69f 100%);
+            border: none;
+            outline: none;
+            font-size: 1.19em;
+            color: #705146;
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            text-align: left;
+            padding: 1.1em 1.2em;
+            cursor: pointer;
+            border-bottom: 1px solid #f3e5d9;
+            transition: background 0.22s, color 0.22s;
+        }
+
+        .accordion-title[aria-expanded="true"] {
+            color: #b07d4e;
+            background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 1.3em 1.6em 1.5em 1.6em;
+            background: #f6f4ee;
+            border-top: 1px solid #eee1d0;
+            animation: fadein 0.33s;
+            font-size: 1.08em;
+            color: #322b2b;
+        }
+        .accordion-item.open .accordion-content {
+            display: block;
+        }
+
+        @media (max-width:700px){
+            .accordion, .accordion-content { padding: 1em 0.3em;}
+            .accordion-title {font-size:1.06em;}
+        }
+
+        
+        .contact-infos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.4em 2.8em;
+            margin: 2em auto 0 auto;
+            max-width: 620px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.7em;
+            font-size: 1.08em;
+            background: #fff6e9;
+            border-radius: 18px;
+            box-shadow: 0 1px 12px #e9d3bb44;
+            padding: 0.62em 1.12em;
+            margin-bottom: 0.5em;
+            transition: box-shadow 0.18s;
+        }
+        .contact-item:hover {
+            box-shadow: 0 4px 20px #fcb69faa, 0 1.5px 10px #70514633;
+        }
+
+        .contact-link {
+            color: #705146;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Montserrat', Arial, sans-serif;
+            transition: color 0.18s;
+        }
+        .contact-link:hover {
+            color: #c78e5f;
+            text-decoration: underline;
+        }
+
+        /* Icônes personnalisées */
+        .contact-icon {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffecd2 60%, #fcb69f 100%);
+            box-shadow: 0 1px 8px #fcb69f33;
+            text-align: center;
+            line-height: 28px;
+            font-size: 1.32em;
+            margin-right: 0.06em;
+            color: #c78e5f;
+        }
+
+        .contact-icon.phone::before {
+            content: "\260E";
+            font-family: Arial, sans-serif;
+            font-size: 1.08em;
+        }
+
+        .contact-icon.mail::before {
+            content: "\2709";
+            font-family: Arial, sans-serif;
+            font-size: 1.05em;
+        }
+
+        .contact-icon.whatsapp {
+            background: linear-gradient(135deg, #fcb69f 55%, #23bab6 100%);
+            color: #fff;
+        }
+        .contact-icon.whatsapp::before {
+            content: "";
+            display: inline-block;
+            width: 19px; height: 19px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="15" fill="%2323bab6"/><path d="M22.4 18.3c-.4-.2-2.3-1.1-2.6-1.3-.3-.1-.5-.2-.8.2s-1 1.3-1.3 1.5c-.2.1-.4.1-.7 0-.3-.2-1.1-.4-2-1.3-.8-.7-1.3-1.5-1.5-1.7-.1-.2 0-.5.1-.7.2-.2.3-.3.5-.6.2-.3.1-.5 0-.7-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5s-.4 0-.6 0c-.2 0-.5 0-.8.4-.3.5-1 1.2-1 2.9 0 1.7 1.2 3.4 2.4 4.6 1.3 1.3 2.9 2.3 4.4 2.3 1.5 0 2.3-.8 2.7-1.2.4-.4.7-.6.8-.8.1-.2.2-.3.3-.5.2-.2.2-.3.2-.5 0-.2-.2-.4-.4-.5z" fill="white"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+        .contact-icon.facebook {
+            background: linear-gradient(135deg, #fcb69f 45%, #3e286e 100%);
+            color: #fff;
+        }
+        .contact-icon.facebook::before {
+            content: "";
+            display: inline-block;
+            width: 18px; height: 18px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="15" fill="%233e286e"/><path d="M19.3 16h-2v7h-3v-7h-1.2v-2.7h1.2v-1.3c0-1 .5-2.7 2.7-2.7l2 .01v2.2h-1.5c-.2 0-.5.1-.5.6v1.2h2l-.3 2.7z" fill="white"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 700px){
+            .contact-infos { flex-direction: column; align-items:center;}
+        }
+
+        #contact {
+        scroll-margin-top: 110px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.97em;
+            color: #877060;
+            padding: 2em 0 1em 0;
+            background: #fff;
+            margin-top: 3em;
+            border-top: 1px solid #eee1d0;
+        }
+
+        @media (max-width: 900px) {
+
+            .services,
+            .testimonials {
+                flex-direction: column;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            nav {
+                display: block;
+                margin-bottom: 0.7em;
+            }
+        }
+
+        .footer-logo-box {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px #c78e5faa, 0 1.5px 16px #70514633;
+            border: 2px solid #fcb69f;
+            padding: 10px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1em auto;
+            width: max-content;
+        }
+
+        .footer-logo-box img {
+            height: 160px;
+            /* adapte la taille selon ton besoin */
+            border-radius: 14px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-logo-box">
+            <img src="Logo-footer.png" alt="Pilier de Lumière">
+        </div>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#" class="menu-link" data-target="soins">Soins</a>
+            <a href="#" class="menu-link" data-target="yoga">Kemetic Yoga</a>
+            <a href="#" class="menu-link" data-target="voyages">Voyages</a>
+            <a href="#" class="menu-link" data-target="formations">Formations</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="cta">Prendre rendez-vous</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Harmonie du corps, de l’âme et de l’esprit</h1>
+            <p>Soins énergétiques, Yoga Kemetic & Formations holistiques en Haute-Normandie<br>
+                par <b>Fabienne Lathoud</b></p>
+            <a href="#services" class="cta">Découvrir mes accompagnements</a>
+
+        </div>
+    </section>
+
+    <section class="section about">
+        <img src="fabienne.jpg" alt="Fabienne Lathoud">
+        <div class="about-text">
+            <h2>Fabienne Lathoud</h2>
+            <p style="font-size: 1.15em; text-align: left;">
+                Je suis guérisseuse, enseignante et coach intuitif.<br>
+                Vous recherchez <span style="color:#3e286e; font-weight:600;">une séance de soins énergétiques</span>,
+                <span style="color:#3e286e; font-weight:600;">une thérapie holistique</span> ou
+                <span style="color:#3e286e; font-weight:600;">une formation bien-être en Haute
+                    Normandie&nbsp;?</span><br>
+                Je vous souhaite la bienvenue chez <b>Pilier de Lumière</b>, où je vous accueille pour des
+                <span style="color:#3e286e; font-weight:600;">soins énergétiques</span> et <span
+                    style="color:#3e286e; font-weight:600;">quantiques</span><br>
+                J’anime également des cours et des ateliers de
+                <span style="color:#3e286e; font-weight:600;">Kemetic yoga</span>
+                et des <span style="color:#3e286e; font-weight:600;">formations de développement personnel et de
+                    pratiques de soins</span>.
+            </p>
+            <br>
+            <button class="cta" id="parcours-btn" style="margin-bottom:1.2em;">En savoir plus sur mon parcours</button>
+            <div id="parcours-details" class="parcours-details">
+                <!-- Le texte déroulant va ici -->
+                <h3 class="parcours-titre">MON HISTOIRE</h3>
+                <hr class="parcours-sep">
+                <p>
+                    Mon parcours de guérisseuse a démarré il y a 15 ans en 2009, avec ma première formation en massage
+                    ayurvédique. Découvrant un <b class="parcours-bold">magnétisme puissant</b> dans mes mains, j’ai été
+                    poussée par la curiosité d’en savoir plus sur ce ressenti très fort.<br><br>
+                    Après de nombreuses formations certifiantes, stages, et expérimentations spirituelles, je suis
+                    devenue, avec évidence et passion, masseuse, praticienne en santé naturelle – rebouteuse,
+                    énergéticienne, et enfin guérisseuse enseignante – coach intuitif.
+                </p>
+                <h3 class="parcours-titre">MON ACCOMPAGNEMENT</h3>
+                <hr class="parcours-sep">
+                <p>
+                    Je mets toutes mes pratiques, mes connaissances, et mes capacités extrasensorielles au service du <b
+                        class="parcours-bold">Mieux Être</b> en toute confidentialité, accompagnant ceux qui sont en
+                    quête d’une thérapie douce et naturelle, souffrent d’effets secondaires de traitements lourds, se
+                    sentent mal, dépressifs ou stressés sans savoir pourquoi, ou encore ceux qui souhaitent développer
+                    leur conscience spirituelle.<br><br>
+                    J’offre une thérapie exclusive à chaque personne, <b class="parcours-bold">en complément des
+                        traitements médicaux</b>, sans jamais conseiller d’arrêter les traitements médicaux sans l’avis
+                    du médecin. Lorsque je parle de spiritualité, il ne s’agit pas de religion ou de dogmes, mais de <b
+                        class="parcours-bold">l’énergie universelle de la nature</b>.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section" id="services" style="scroll-margin-top: 100px;">
+        <h2 style="text-align:center; color:#c78e5f; font-family:'Lora',serif;">Découvrir mes accompagnements</h2>
+        <div class="services">
+            <div class="service-card">
+                <img src="soins.png" alt="Soins énergétiques">
+                <h3>Soins énergétiques et quantiques</h3>
+                <p>Séances personnalisées pour lever les blocages, retrouver vitalité et paix intérieure, en présentiel
+                    ou à distance.</p>
+                <button class="cta discover-btn" data-target="soins">Découvrir</button>
+            </div>
+            <div class="service-card">
+                <img src="kemeticyoga.png" alt="Kemetic Yoga">
+                <h3>Kemetic Yoga</h3>
+                <p>Pratique ancestrale issue de l’Égypte antique pour l’équilibre du corps, de l’âme et de l’esprit,
+                    adaptée à tous les âges.</p>
+                <button class="cta discover-btn" data-target="yoga">En savoir plus</button>
+            </div>
+            <div class="service-card">
+                <img src="voyage.jpg" alt="Voyages initiatiques">
+                <h3>Voyages initiatiques</h3>
+                <p>Immersion et transformation dans des lieux sacrés, pour une reconnexion profonde à votre essence.</p>
+                <button class="cta discover-btn" data-target="voyages">Prochains voyages</button>
+
+            </div>
+            <div class="service-card">
+                <img src="formation.jpeg" alt="Formations">
+                <h3>Formations</h3>
+                <p>Développez vos capacités énergétiques et extrasensorielles grâce à des parcours adaptés à chacun.</p>
+                <button class="cta discover-btn" data-target="formations">Découvrir</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 style="text-align:center; color:#c78e5f; font-family:'Lora',serif;">Témoignages</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                Les soins de Fabienne m’ont permis de retrouver confiance et sérénité. Une transformation intérieure
+                profonde.
+                <span>– Marie D.</span>
+            </div>
+            <div class="testimonial">
+                Le yoga kemetic m’a apporté une paix et une énergie nouvelle. Merci pour cet accompagnement lumineux !
+                <span>– Antoine L.</span>
+            </div>
+            <div class="testimonial">
+                Grâce à la formation, j’ai pu ouvrir mon cabinet et m’épanouir dans ma vocation d’accompagnante.
+                <span>– Céline B.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="prestations">
+    <h2 style="text-align:center; color:#c78e5f; font-family:'Lora',serif;">En savoir plus</h2>
+
+    <div class="accordion">
+        <div class="accordion-item" id="soins">
+            <button class="accordion-title" aria-expanded="false">Soins énergétiques et quantiques</button>
+            <div class="accordion-content">
+                <h3 style="color:#b07d4e; font-family:'Lora',serif; font-size:1.2em; margin-top:0;">Quel est le but d’une séance de soins énergétiques et quantiques&nbsp;?</h3>
+                <p>
+                    <b>Dépolluer tous les corps</b> : physique, énergétiques et spirituels afin d’être en harmonie avec son être profond et être heureux.se dans sa vie.<br>
+                    Les soins aident à trouver un équilibre <b>Corps, Âme et Esprit</b>. On appelait cet état d’être de bien-être <b style="color:#23bab6;">la Maa’t</b> à l’époque de Kemet (Égypte ancienne).
+                </p>
+
+                <h4 style="color:#6d50b5; margin-bottom:0.2em;">Identifier les pollutions énergétiques et spirituelles</h4>
+                <p>
+                    Je suis <b>canal, clairaudiante, clairvoyante et clairsentiente</b> : je peux donc savoir si vous avez des pollutions spirituelles et énergétiques telles que le mauvais œil, la magie noire, des entités diverses, des mémoires karmiques, des mémoires transgénérationnelles, des schémas répétitifs… qui vous empêchent d’avancer aujourd’hui ou vous rendent malade.<br><br>
+                    Je vous propose un suivi complet pour que vous ressentiez un mieux-être. Une fois le nettoyage effectué, je rééquilibre vos corps et ré-informe vos cellules ou reprogramme votre ADN.
+                </p>
+
+                <h4 style="color:#6d50b5; margin-bottom:0.2em;">Méthode Énergiefusion<sup style="font-size:0.9em;">©</sup></h4>
+                <p>
+                    J’ai ma propre méthode <b>Énergiefusion<sup>©</sup></b>, un mix de deux pratiques ancestrales : <b>le soin atlante</b> et <b>le soin égypto-essénien</b>.
+                    Ces deux approches utilisent le pouvoir guérisseur de la lumière, du son, du magnétisme, et de la reliance dans le but de maintenir ou rétablir l’équilibre harmonieux entre les corps, l’âme et l’esprit.<br>
+                    Ce soin agit en rétablissant la circulation de l’énergie qui a été perturbée par le stress, la maladie, les formes-pensées négatives, les pollutions spirituelles et les difficultés de la vie quotidienne.
+                </p>
+                <p>
+                    C’est une forme très ancienne de guérison utilisée il y a plusieurs millénaires à l’époque de l’Atlantide, puis reprise en Égypte (Kemet) par les Esséniens.
+                    Grâce à la circulation de cette énergie divine, les corps transmettent à l’âme les différentes libérations physiques, émotionnelles, mentales et spirituelles dont nous avons tous besoin pour nous défaire de nos blessures du passé.
+                </p>
+
+                <hr style="margin:1.2em 0; border: none; border-top:1.5px solid #e9d3bb;">
+                <h3 style="color:#b07d4e; margin-bottom:0.3em;">Tarifs & accompagnements</h3>
+                <ul style="padding-left:1.2em; margin-bottom:1.2em;">
+                    <li><b style="color:#6d50b5;">SOIN SOS</b> <b style="color:#b07d4e;">| 85&nbsp;€</b><br>
+                        Pour un problème précis : migraine, dos bloqué, acouphènes, entorse, sciatique…<br>
+                        <span style="color:#b07d4e;">Seuls les soins nécessitant le toucher (reboutement ou massage) se font en présentiel dans l’Eure à Gisors.</span>
+                    </li>
+                    <li style="margin-top:0.7em;"><b style="color:#6d50b5;">THÉRAPIE ÉNERGÉTIQUE ET SPIRITUELLE ATLANTE / EGYPTIENNE</b> <b style="color:#b07d4e;">| 300&nbsp;€</b><br>
+                        Thérapie sur 4 séances (chacune unique selon vos besoins), à distance ou en visio.<br>
+                        Chaque séance dure entre 1h et 2h.<br>
+                        <i>Pour futur·es praticien·nes ou artistes, 3 soins supplémentaires recommandés pour développer vos capacités extrasensorielles.</i><br>
+                        <span style="color:#b07d4e;">Harmoniser votre lieu de vie est conseillé pour une efficacité maximale.</span>
+                    </li>
+                    <li style="margin-top:0.7em;"><b style="color:#6d50b5;">SOIN AKASHIQUE / KARMIQUE</b> <b style="color:#b07d4e;">| 85&nbsp;€</b><br>
+                        Pour lever des blocages de vie, comprendre des relations, nettoyer des mémoires karmiques ou récupérer des mémoires positives de vies antérieures.<br>
+                        Durée : entre 40 min et 2h.
+                    </li>
+                    <li style="margin-top:0.7em;"><b style="color:#6d50b5;">HARMONISATION DE LIEU</b> <b style="color:#b07d4e;">| 240&nbsp;€</b>
+                        <br>
+                        Forfait 4 soins individuels + Harmonisation du lieu <b style="color:#b07d4e;">| 500&nbsp;€</b><br>
+                        L’harmonisation se fait au tambour chamanique et en canalisation (présentiel dans l’Eure/région parisienne) ou à distance sur plan dessiné.
+                        <br>
+                        Nettoyage des mémoires du lieu (terrain, murs, pensées négatives, miasmes, entités, phénomènes géobiologiques…). Protection du lieu par le gardien.
+                    </li>
+                </ul>
+                <p style="color:#6d50b5; font-style:italic;">
+                    N’hésitez pas à suivre mes actualités pour vous informer des nouveautés et à prendre rendez-vous pour une première séance.
+                </p>
+            </div>
+
+        </div>
+        <div class="accordion-item" id="yoga">
+            <button class="accordion-title" aria-expanded="false">Kemetic Yoga</button>
+            <div class="accordion-content">
+                <h3 style="color:#b07d4e; font-family:'Lora',serif; font-size:1.18em; margin-top:0;">Le Kemetic Yoga</h3>
+                <p>
+                    En plus des soins énergétiques et des formations en thérapies douces et naturelles, je vous propose des séances de <b>Kemetic Yoga</b> dans l’Eure.
+                </p>
+                <ul style="margin-bottom:1em; padding-left:1.4em;">
+                    <li><b>Chaque mercredi</b> de 12h00 à 13h00 au <span style="color:#23bab6;">Aquavexin de Trie-Château (60)</span></li>
+                    <li><b>Chaque vendredi</b> de 9h30 à 10h45 à la <span style="color:#23bab6;">salle des fêtes de Morgny (27)</span></li>
+                </ul>
+
+                <p>
+                    Le Kemetic yoga est une discipline ancestrale issue de l’Égypte antique, alors nommée « Kemet ». Les kamites pratiquaient ce yoga pour préserver leur santé physique, mentale, énergétique et spirituelle.
+                </p>
+                <p>
+                    Cette recherche d’équilibre <b>Corps, Âme et Esprit</b> est symbolisée par la <b style="color:#23bab6;">Maa’t</b>, la fameuse balance de la justice et de l’harmonie. Leur vision du corps était holistique&nbsp;: les sages égyptiens savaient déjà que le corps physique était indissociable d’autres corps invisibles.
+                </p>
+
+                <h4 style="color:#6d50b5; margin-bottom:0.2em;">À qui s’adresse une séance de Kemetic Yoga ?</h4>
+                <p>
+                    Le Kemetic yoga est ouvert à tous&nbsp;: enfants, adultes, seniors.<br>
+                    J’organise des cours spécifiques pour les seniors et les jeunes enfants afin de soutenir la mobilité et prévenir ou apaiser certains maux.
+                </p>
+                <p>
+                    Des cours en extérieur, pour des groupes ou des entreprises, sont également possibles sur demande.<br>
+                    En résumé, le Kemetic yoga s’adresse vraiment à toutes et tous, de <b>1 à 90 ans</b> !
+                </p>
+                <p style="color:#b07d4e; font-weight:bold; margin-top:1em;">
+                    N’attendez plus et demandez un devis pour réserver votre séance de yoga dans l’Eure.
+                </p>
+            </div>
+
+        </div>
+        <div class="accordion-item" id="voyages">
+            <button class="accordion-title" aria-expanded="false">Voyages initiatiques</button>
+            <div class="accordion-content">
+                <h3 style="color:#b07d4e; font-family:'Lora',serif; font-size:1.18em; margin-top:0;">
+                    Voyages initiatiques – Transformation & Reconnexion
+                </h3>
+                <p>
+                    <b>Pilier de Lumière</b> vous invite à expérimenter le pouvoir de la transformation et de l’ouverture d’esprit que peuvent offrir les <b>voyages initiatiques</b>, conçus pour ceux qui souhaitent approfondir leur compréhension de soi et renforcer leur connexion avec la Nature et l’Univers dans des lieux extraordinaires.
+                </p>
+
+                <h4 style="color:#6d50b5; margin-bottom:0.2em;">Des voyages initiatiques sur mesure</h4>
+                <p>
+                    <b>Pilier de Lumière</b> propose des <b>voyages initiatiques uniques</b>, en co-création avec des agences spécialisées. Ces escapades “5D” sont bien plus qu’une simple retraite : elles représentent une <b>quête profonde de sens</b>, une opportunité de se déconnecter du tumulte quotidien pour se reconnecter à son essence.<br>
+                    L’accompagnement par une thérapeute spécialisée en voyages initiatiques permet à chaque participant de recevoir des révélations et des enseignements avec sagesse et sérénité.<br>
+                    Ces voyages sont une invitation à explorer des <span style="color:#23bab6;">lieux vibrants, hauts en énergies</span>, où la nature contribue à la guérison et à l’éveil spirituel.
+                </p>
+
+                <h4 style="color:#6d50b5; margin-bottom:0.2em;">Transformation et reconnexion</h4>
+                <p>
+                    L’essence des voyages initiatiques transcende la simple exploration de paysages exotiques. Ces moments d’évasion, partagés avec un cercle de personnes bienveillantes en “5D”, sont des occasions privilégiées pour se ressourcer profondément.<br>
+                    En se connectant à des sites empreints de richesse historique et spirituelle, tels que <b>Malte</b> et <b>l’Égypte</b>, les participants s’immergent dans des <b>hauts lieux énergétiques</b> où la tradition ancestrale se mêle à l’enseignement.
+                </p>
+                <p>
+                    Chaque étape de ce voyage s’avère être un véritable parcours de <b>reconnexion avec soi-même</b>, pavant la voie à une exploration plus profonde de sa spiritualité et de son potentiel sans limites.<br>
+                    En ma qualité de <b>guérisseuse enseignante</b> accompagnatrice de ces voyages initiatiques, je me dévoue à être le catalyseur de cette transformation, offrant soutien et conseils à travers cette aventure spirituelle enrichissante.
+                </p>
+
+                <hr style="margin:1.2em 0; border: none; border-top:1.5px solid #e9d3bb;">
+
+                <h4 style="color:#b07d4e; margin-bottom:0.3em;">Prochain voyage</h4>
+                <ul style="padding-left:1.3em;">
+                    <li>
+                        <b>Voyage initiatique en Égypte</b><br>
+                        <span style="color:#6d50b5;">Du 17 au 27 octobre 2025</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="accordion-item" id="formations">
+            <button class="accordion-title" aria-expanded="false">Formations</button>
+            <div class="accordion-content">
+                <p>
+                    L’énergétique vous attire&nbsp;? Vous souhaitez bénéficier d’une <b>formation de soins énergétiques</b> ou de <b>massage bien-être</b> dans l’Eure&nbsp;?<br>
+                    <b>Pilier de Lumière</b> vous forme et vous accompagne pour réaliser votre projet professionnel.
+                </p>
+                <h3 style="color:#6d50b5; margin-bottom:0.2em;">
+                    La Prépa des Lumières
+                </h3>
+                <p>
+                    La formation <span style="color:#b07d4e; font-weight:bold;">Prépa des Lumières</span> s’adresse avant tout à celles et ceux qui désirent travailler sur eux-mêmes, découvrir ou approfondir leurs <b>capacités extrasensorielles</b>.
+                </p>
+                <p>
+                    Elle est également conçue pour les futur·es praticien·nes et thérapeutes souhaitant se former à un <b>métier du bien-être ou de la thérapie alternative</b>, et développer leurs aptitudes pour être efficaces dans leur future pratique.
+                </p>
+
+                <h3 style="color:#6d50b5; margin-bottom:0.2em;">Formations massage intuitif et ayurvédique</h3>
+                <p>
+                    Ces deux parcours s’adressent aux praticien·nes maîtrisant déjà au moins une technique de massage.  
+                    <br>La formation se déroule sur 3 journées en présentiel dans l’Eure, suivies d’un accompagnement sur 3 mois (supervision, réponses à vos questions, corrections si besoin).
+                    <br>Possibilité de suivre la formation en individuel ou en petit groupe (8 personnes max) pour privilégier la qualité de l’enseignement.
+                </p>
+
+                <h3 style="color:#6d50b5; margin-bottom:0.2em;">Formation praticien·ne énergéticien·ne</h3>
+                <p>
+                    Ce cursus s’adresse à celles et ceux qui souhaitent pratiquer différents soins énergétiques (égypto-esséniens, atlantes, pléïadiens…) et les intégrer à leurs propres pratiques de santé naturelle.
+                </p>
+                <p>
+                    La formation en soins énergétiques et quantiques est basée sur la méthode <b>Énergiefusion<sup>©</sup></b> développée par Pilier de Lumière.
+                </p>
+
+                <hr style="margin:1.2em 0; border: none; border-top:1.5px solid #e9d3bb;">
+
+                <h4 style="color:#b07d4e; margin-bottom:0.3em;">Accompagnement à l’installation</h4>
+                <p>
+                    Un accompagnement personnalisé et du coaching sont proposés aux futur·es praticien·nes qui souhaitent s’installer en cabinet après le cursus complet (Prépa des Lumières, formation de pratiques de soins, accompagnement à l’installation).
+                    <br>
+                    <span style="color:#6d50b5;">
+                        Vous trouverez des outils pour vous faire connaître, communiquer, définir votre identité (logo, couleurs, spécificités) et développer votre activité en toute légitimité.
+                    </span>
+                </p>
+
+                <p style="color:#6d50b5; font-weight:bold;">
+                    Pour plus d’informations sur les actualités de notre centre de formation ou pour toute question,
+                    <a href="#contact" style="color:#b07d4e; font-weight:bold; text-decoration:underline;">contactez-nous</a> !
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+
+<section class="contact-section" id="contact" style="background: linear-gradient(90deg, #fff8f3 0%, #ffecd2 100%); border: none; box-shadow: none;">
+    <div style="
+        max-width: 480px; 
+        margin: 0 auto; 
+        background: #fffaf6; 
+        border-radius: 2em;
+        box-shadow: 0 2px 30px #fcb69f44, 0 1.5px 12px #7051461c;
+        padding: 2.5em 1.8em 2.2em 1.8em; 
+        text-align: center;
+    ">
+        <h2 style="color:#b07d4e; font-family:'Lora',serif; font-size:2em; margin-bottom:0.3em;">
+            Un besoin, une question&nbsp;?
+        </h2>
+        <p style="color: #705146; margin-bottom: 1.5em;">
+            Contactez-moi ou prenez rendez-vous facilement&nbsp;!
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 1.1em; align-items:center;">
+            <a href="tel:0750116700" style="
+                display: flex; align-items: center; gap: 1em; 
+                background: linear-gradient(90deg, #ffecd2 60%, #fcb69f 100%);
+                border-radius: 1.5em; box-shadow: 0 2px 10px #e9d3bb33;
+                padding: 0.8em 1.3em; font-size: 1.12em; color: #6d50b5; 
+                text-decoration: none; font-weight: bold;
+                transition: background 0.18s, color 0.18s, transform 0.14s;
+            " onmouseover="this.style.background='linear-gradient(90deg,#fcb69f 80%,#ffecd2 100%)';this.style.color='#fff';this.style.transform='scale(1.04)'" onmouseout="this.style.background='linear-gradient(90deg,#ffecd2 60%,#fcb69f 100%)';this.style.color='#6d50b5';this.style.transform='scale(1)'">
+                <span style="
+                    display:inline-flex;justify-content:center;align-items:center;width:36px;height:36px;
+                    background: linear-gradient(135deg, #ffecd2 60%, #fcb69f 100%);
+                    border-radius: 50%; font-size: 1.4em; color: #c78e5f;
+                    box-shadow: 0 2px 8px #e9d3bb33; border:2px solid #fcb69f66;">
+                    <svg width="20" height="20" fill="none" stroke="#c78e5f" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" fill="#fff8f3" stroke="#fcb69f"/>
+                        <path d="M15 17h5v-2a7 7 0 1 0-14 0v2h5" stroke="#c78e5f" fill="none"/>
+                        <path d="M9 9h.01M15 9h.01" stroke="#c78e5f"/>
+                    </svg>
+                </span>
+                07 50 11 67 00
+            </a>
+            <a href="tel:0750116700" style="
+                display: flex; align-items: center; gap: 1em; 
+                background: linear-gradient(90deg, #ffecd2 60%, #fcb69f 100%);
+                border-radius: 1.5em; box-shadow: 0 2px 10px #e9d3bb33;
+                padding: 0.8em 1.3em; font-size: 1.12em; color: #6d50b5; 
+                text-decoration: none; font-weight: bold;
+                transition: background 0.18s, color 0.18s, transform 0.14s;
+            " onmouseover="this.style.background='linear-gradient(90deg,#fcb69f 80%,#ffecd2 100%)';this.style.color='#fff';this.style.transform='scale(1.04)'" onmouseout="this.style.background='linear-gradient(90deg,#ffecd2 60%,#fcb69f 100%)';this.style.color='#6d50b5';this.style.transform='scale(1)'">
+                <span style="
+                    display:inline-flex;justify-content:center;align-items:center;width:36px;height:36px;
+                    background: linear-gradient(135deg, #ffecd2 60%, #fcb69f 100%);
+                    border-radius: 50%; font-size: 1.3em; color: #c78e5f;
+                    box-shadow: 0 2px 8px #e9d3bb33; border:2px solid #fcb69f66;">
+                    <svg width="20" height="20" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="10" fill="#fff8f3" stroke="#fcb69f"/><path d="M4 8l8 5 8-5" stroke="#c78e5f" stroke-width="1.5" fill="none"/><path d="M4 8v8h16V8" stroke="#c78e5f" stroke-width="1.5" fill="none"/></svg>
+                </span>
+                piliersdelumiere@gmail.com
+            </a>
+            <a href="https://wa.me/11234567890" target="_blank" style="
+                display: flex; align-items: center; gap: 1em; 
+                background: linear-gradient(90deg, #ffecd2 60%, #fcb69f 100%);
+                border-radius: 1.5em; box-shadow: 0 2px 10px #e9d3bb33;
+                padding: 0.8em 1.3em; font-size: 1.12em; color: #6d50b5; 
+                text-decoration: none; font-weight: bold;
+                transition: background 0.18s, color 0.18s, transform 0.14s;
+            " onmouseover="this.style.background='linear-gradient(90deg,#23bab6 80%,#fcb69f 100%)';this.style.color='#fff';this.style.transform='scale(1.04)'" onmouseout="this.style.background='linear-gradient(90deg,#fcb69f 30%,#23bab6 100%)';this.style.color='#155e5a';this.style.transform='scale(1)'">
+                <span style="
+                    display:inline-flex;justify-content:center;align-items:center;width:36px;height:36px;
+                    background: linear-gradient(135deg, #23bab6 35%, #fcb69f 100%);
+                    border-radius: 50%; font-size: 1.34em; color: #fff;
+                    box-shadow: 0 2px 8px #e9d3bb33; border:2px solid #23bab6;">
+                    <svg width="22" height="22" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#23bab6"/><path d="M22.4 18.3c-.4-.2-2.3-1.1-2.6-1.3-.3-.1-.5-.2-.8.2s-1 1.3-1.3 1.5c-.2.1-.4.1-.7 0-.3-.2-1.1-.4-2-1.3-.8-.7-1.3-1.5-1.5-1.7-.1-.2 0-.5.1-.7.2-.2.3-.3.5-.6.2-.3.1-.5 0-.7-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5s-.4 0-.6 0c-.2 0-.5 0-.8.4-.3.5-1 1.2-1 2.9 0 1.7 1.2 3.4 2.4 4.6 1.3 1.3 2.9 2.3 4.4 2.3 1.5 0 2.3-.8 2.7-1.2.4-.4.7-.6.8-.8.1-.2.2-.3.3-.5.2-.2.2-.3.2-.5 0-.2-.2-.4-.4-.5z" fill="white"/></svg>
+                </span>
+                Groupe WhatsApp
+            </a>
+            <a href="https://facebook.com/groups/mon-groupe-factice" target="_blank" style="
+                display: flex; align-items: center; gap: 1em; 
+                background: linear-gradient(90deg, #ffecd2 35%, #fcb69f 100%);
+                border-radius: 1.5em; box-shadow: 0 2px 10px #e9d3bb33;
+                padding: 0.8em 1.3em; font-size: 1.12em; color: #6d50b5; 
+                text-decoration: none; font-weight: bold;
+                transition: background 0.18s, color 0.18s, transform 0.14s;
+            " onmouseover="this.style.background='linear-gradient(90deg,#3e286e 80%,#fcb69f 100%)';this.style.color='#fff';this.style.transform='scale(1.04)'" onmouseout="this.style.background='linear-gradient(90deg,#fcb69f 30%,#3e286e 100%)';this.style.color='#382e5c';this.style.transform='scale(1)'">
+                <span style="
+                    display:inline-flex;justify-content:center;align-items:center;width:36px;height:36px;
+                    background: linear-gradient(135deg, #3e286e 65%, #fcb69f 100%);
+                    border-radius: 50%; font-size: 1.34em; color: #fff;
+                    box-shadow: 0 2px 8px #e9d3bb33; border:2px solid #3e286e;">
+                    <svg width="22" height="22" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#3e286e"/><path d="M19.3 16h-2v7h-3v-7h-1.2v-2.7h1.2v-1.3c0-1 .5-2.7 2.7-2.7l2 .01v2.2h-1.5c-.2 0-.5.1-.5.6v1.2h2l-.3 2.7z" fill="white"/></svg>
+                </span>
+                Groupe Facebook
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer>
+        <div class="footer-logo-box">
+            <img src="Logo-footer.png" alt="Logo Pilier de Lumière">
+        </div>
+        Pilier de Lumière &copy; 2025 – Fabienne Lathoud | Haute-Normandie <br>
+        <a href="#" style="color:#b07d4e;text-decoration:underline;">Mentions légales</a> | <a href="#"
+            style="color:#b07d4e;text-decoration:underline;">Politique de confidentialité</a>
+        <br><br>
+        <span style="font-size:1.3em;">
+            <a href="#" style="margin:0 0.5em;color:#c78e5f;">Instagram</a> |
+            <a href="#" style="margin:0 0.5em;color:#c78e5f;">Facebook</a>
+        </span>
+    </footer>
+
+    <script>
+    document.querySelectorAll('.menu-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = this.getAttribute('data-target');
+            // Ferme tous les accordéons
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                item.classList.remove('open');
+                item.querySelector('.accordion-title').setAttribute('aria-expanded', "false");
+            });
+            // Ouvre le bon accordéon
+            const item = document.getElementById(target);
+            if(item) {
+                item.classList.add('open');
+                item.querySelector('.accordion-title').setAttribute('aria-expanded', "true");
+                // Calcul du scroll avec marge pour ne pas rogner le haut
+                const offset = 110; // ajuste selon la hauteur de ton header
+                const rect = item.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const top = rect.top + scrollTop - offset;
+                window.scrollTo({
+                    top: top,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+    </script>
+
+
+    <script>
+        document.getElementById('parcours-btn').onclick = function () {
+            var details = document.getElementById('parcours-details');
+            if (details.style.display === "block") {
+                details.style.display = "none";
+                this.textContent = "En savoir plus sur mon parcours";
+            } else {
+                details.style.display = "block";
+                this.textContent = "Refermer";
+            }
+        };
+    </script>
+
+    <script>
+    document.querySelectorAll('.discover-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = this.getAttribute('data-target');
+            // Ferme tous les accordéons
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                item.classList.remove('open');
+                item.querySelector('.accordion-title').setAttribute('aria-expanded', "false");
+            });
+            // Ouvre le bon accordéon
+            const item = document.getElementById(target);
+            if(item) {
+                item.classList.add('open');
+                item.querySelector('.accordion-title').setAttribute('aria-expanded', "true");
+                // Calcul du scroll avec marge pour ne pas rogner le haut
+                const offset = 110; // marge pour header
+                const rect = item.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const top = rect.top + scrollTop - offset;
+                window.scrollTo({
+                    top: top,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+    </script>
+
+
+    <script>
+    document.querySelectorAll('.accordion-title').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const item = this.parentElement;
+            const expanded = this.getAttribute('aria-expanded') === "true";
+            // Ferme tous les autres
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.accordion-title').setAttribute('aria-expanded', "false");
+            });
+            // Ouvre celui cliqué si ce n'était pas déjà ouvert
+            if(!expanded) {
+                item.classList.add('open');
+                this.setAttribute('aria-expanded', "true");
+            }
+        });
+    });
+    </script>
+
+
+</body>
+
+</html>
